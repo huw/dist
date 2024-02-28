@@ -1,0 +1,15 @@
+{
+  "deno": {
+    "enable": true
+  },
+  "language_overrides": {
+    "TypeScript": {
+      "formatter": {
+        "external": {
+          "command": "deno",
+          "arguments": ["fmt", "-"]
+        }
+      }
+    }
+  }
+}
