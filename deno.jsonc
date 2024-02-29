@@ -1,14 +1,8 @@
 {
   "name": "@huw/dist",
-  "version": "0.1.0",
-  "exports": {
-    ".": "./mod.ts",
-    "./core": "./core.ts"
-  },
+  "version": "0.2.0",
+  "exports": "./mod.ts",
   "imports": {
-    "d3": "npm:d3@^7.8.5",
-    "fast-kde": "npm:fast-kde@^0.2.1",
-    "@observablehq/plot": "npm:@observablehq/plot@^0.6.13",
     "subscript/parse": "npm:subscript@^8.2.2/parse.js",
     "subscript/compile": "npm:subscript@^8.2.2/compile.js",
     "@stdlib/random/sample": "./vendor/esm.sh/@stdlib/random@0.2.1/sample/lib.js",

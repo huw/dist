@@ -12,9 +12,9 @@ function extractViewof(
       ) {
         return view.value;
       }
-    }
 
-    throw new TypeError("Cannot extract viewof from HTMLElement.");
+      throw new TypeError("Cannot extract viewof from HTMLElement.");
+    }
   }
 
   return view as number | number[];
