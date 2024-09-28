@@ -3,18 +3,19 @@
   "version": "0.2.0",
   "exports": "./mod.ts",
   "imports": {
-    "subscript/parse": "npm:subscript@^8.2.2/parse.js",
+    "@es-toolkit/es-toolkit": "jsr:@es-toolkit/es-toolkit@^1.21.0",
+    "@toshiara/special-erfinv": "npm:@toshiara/special-erfinv@^1.0.0",
+    "d3": "npm:d3@^7.9.0",
+    "d3-random": "npm:d3-random@^3.0.1",
     "subscript/compile": "npm:subscript@^8.2.2/compile.js",
-    "@stdlib/random/sample": "./vendor/esm.sh/@stdlib/random@0.2.1/sample/lib.js",
-    "@stdlib/random/base/lognormal": "./vendor/esm.sh/@stdlib/random@0.2.1/base/lognormal/lib.js",
-    "@stdlib/random/base/normal": "./vendor/esm.sh/@stdlib/random@0.2.1/base/normal/lib.js",
-    "@stdlib/random/base/uniform": "./vendor/esm.sh/@stdlib/random@0.2.1/base/uniform/lib.js",
-    "@stdlib/random/base/beta": "./vendor/esm.sh/@stdlib/random@0.2.1/base/beta/lib.js",
-    "@stdlib/random/base/gamma": "./vendor/esm.sh/@stdlib/random@0.2.1/base/gamma/lib.js",
-    "@stdlib/math/base/special/erfinv": "./vendor/esm.sh/@stdlib/math@0.2.1/base/special/erfinv/lib.js",
-    "/v135/": "./vendor/esm.sh/v135/"
+    "subscript/parse": "npm:subscript@^8.2.2/parse.js"
   },
   "compilerOptions": {
-    "lib": ["dom", "dom.iterable", "dom.asynciterable", "deno.ns"]
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "dom.asynciterable",
+      "deno.ns"
+    ]
   }
 }

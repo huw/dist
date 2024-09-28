@@ -1,4 +1,4 @@
-import sample from "@stdlib/random/sample";
+import { sampleSize } from "@es-toolkit/es-toolkit";
 
 function extractViewof(
   view: number | number[] | HTMLElement,
@@ -52,8 +52,8 @@ export default function operate(
     const n = Math.min(a.length, b.length);
     const S: number[] = Array.from({ length: n });
 
-    const aBar = sample(a, { size: n });
-    const bBar = sample(b, { size: n });
+    const aBar = sampleSize(a, n);
+    const bBar = sampleSize(b, n);
 
     for (let i = 0; i < S.length; i++) {
       S[i] = operation(aBar[i], bBar[i]);

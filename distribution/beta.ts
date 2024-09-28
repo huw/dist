@@ -1,13 +1,13 @@
 import { DEFAULT_N } from "./parameters.ts";
 import randomSample from "../randomSample.ts";
-import randomBeta from "@stdlib/random/base/beta";
+import { randomBeta } from "d3";
 
 export default function beta(
   α: number,
   β: number,
   { n = DEFAULT_N } = {},
 ): number[] {
-  return randomSample(randomBeta, n, α, β);
+  return randomSample(randomBeta(α, β), n);
 }
 
 export function betaMeanSampleSize(

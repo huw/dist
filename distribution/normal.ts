@@ -1,14 +1,14 @@
 import { DEFAULT_N, DEFAULT_P } from "./parameters.ts";
 import randomSample from "../randomSample.ts";
-import randomNormal from "@stdlib/random/base/normal";
-import erfinv from "@stdlib/math/base/special/erfinv";
+import { randomNormal } from "d3";
+import { erfinv } from "@toshiara/special-erfinv";
 
 export default function normal(
   μ: number,
   σ: number,
   { n = DEFAULT_N } = {},
 ): number[] {
-  return randomSample(randomNormal, n, μ, σ);
+  return randomSample(randomNormal(μ, σ), n);
 }
 
 export function normalInterval(

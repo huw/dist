@@ -10,8 +10,11 @@ import uniform from "../distribution/uniform.ts";
 
 Deno.test("beta", () => {
   console.log("beta(5, 10)", beta(5, 10, { n: 5 }));
-  console.log("betaMeanSampleSize(5, 10)", betaMeanSampleSize(5, 10, { n: 5 }));
-  console.log("betaMeanStdev(5, 2)", betaMeanStdev(5, 2, { n: 5 }));
+  console.log(
+    "betaMeanSampleSize(0.5, 10)",
+    betaMeanSampleSize(0.5, 10, { n: 5 }),
+  );
+  console.log("betaMeanStdev(0.5, 0.1)", betaMeanStdev(0.5, 0.1, { n: 5 }));
 });
 
 Deno.test("exponential", () => {
