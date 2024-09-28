@@ -1,33 +1,10 @@
 import { sampleSize } from "@es-toolkit/es-toolkit";
 
-function extractViewof(
-  view: number | number[] | HTMLElement,
-): number | number[] {
-  if (typeof HTMLElement === "function") {
-    if (view instanceof HTMLElement) {
-      if (
-        "value" in view && (
-          typeof view.value === "number" || Array.isArray(view.value)
-        )
-      ) {
-        return view.value;
-      }
-
-      throw new TypeError("Cannot extract viewof from HTMLElement.");
-    }
-  }
-
-  return view as number | number[];
-}
-
 export default function operate(
   operation: (a: number, b: number) => number,
   a: number | number[],
   b: number | number[],
 ) {
-  a = extractViewof(a);
-  b = extractViewof(b);
-
   if (typeof a === "number" && typeof b === "number") {
     return operation(a, b);
   }

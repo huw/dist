@@ -9,13 +9,5 @@
     "d3-random": "npm:d3-random@^3.0.1",
     "subscript/compile": "npm:subscript@^8.2.2/compile.js",
     "subscript/parse": "npm:subscript@^8.2.2/parse.js"
-  },
-  "compilerOptions": {
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "dom.asynciterable",
-      "deno.ns"
-    ]
   }
 }
