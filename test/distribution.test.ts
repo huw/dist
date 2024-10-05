@@ -1,12 +1,16 @@
-import beta, {
+import {
+  beta,
   betaMeanSampleSize,
   betaMeanStdev,
-} from "../distribution/beta.ts";
-import exponential from "../distribution/exponential.ts";
-import gamma from "../distribution/gamma.ts";
-import lognormal, { lognormalInterval, to } from "../distribution/lognormal.ts";
-import normal, { normalInterval } from "../distribution/normal.ts";
-import uniform from "../distribution/uniform.ts";
+  exponential,
+  gamma,
+  lognormal,
+  lognormalInterval,
+  normal,
+  normalInterval,
+  to,
+  uniform,
+} from "../mod.ts";
 import assertArray from "./assertArray.ts";
 
 Deno.test("beta", () => {

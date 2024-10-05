@@ -1,7 +1,4 @@
-import uniform from "../distribution/uniform.ts";
-import normal from "../distribution/normal.ts";
-import { to } from "../distribution/lognormal.ts";
-import dist from "../dist.ts";
+import { dist, normal, to, uniform } from "../mod.ts";
 import { assertEquals, assertThrows } from "@std/assert";
 import assertArray from "./assertArray.ts";
 

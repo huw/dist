@@ -1,5 +1,4 @@
-import { to } from "../distribution/lognormal.ts";
-import operate from "../operate.ts";
+import { operate, to } from "../mod.ts";
 import assertArray from "./assertArray.ts";
 
 Deno.test("operate", () => {

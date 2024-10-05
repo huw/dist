@@ -11,6 +11,9 @@ export default function lognormal(
   return randomSample(randomLogNormal(μ, σ), n);
 }
 
+/**
+ * Also exported as `to`
+ */
 export function lognormalInterval(
   u: number,
   v: number,
@@ -25,5 +28,3 @@ export function lognormalInterval(
 
   return lognormal(μ, σ, { n });
 }
-
-export const to = lognormalInterval;

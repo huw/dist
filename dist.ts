@@ -8,7 +8,7 @@ import {
   PREC_PREFIX,
 } from "subscript/const";
 import operate from "./operate.ts";
-import { to } from "./distribution/lognormal.ts";
+import { lognormalInterval } from "./distribution/lognormal.ts";
 
 // Support for numeric literals
 import "subscript/feature/number.js";
@@ -152,7 +152,7 @@ operator(
       const compiledLeft = compile(left);
       const compiledRight = compile(right);
       return (bindings: Record<string, unknown>) =>
-        to(compiledLeft(bindings), compiledRight(bindings));
+        lognormalInterval(compiledLeft(bindings), compiledRight(bindings));
     }
   },
 );

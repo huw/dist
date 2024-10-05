@@ -1,4 +1,6 @@
 export { default as dist } from "./dist.ts";
+export { default as mixture } from "./mixture.ts";
+export { default as operate } from "./operate.ts";
 export {
   betaMeanSampleSize,
   betaMeanStdev,
@@ -9,7 +11,7 @@ export { default as gamma } from "./distribution/gamma.ts";
 export {
   default as lognormal,
   lognormalInterval,
-  to,
+  lognormalInterval as to,
 } from "./distribution/lognormal.ts";
 export { default as normal, normalInterval } from "./distribution/normal.ts";
 export { default as uniform } from "./distribution/uniform.ts";
