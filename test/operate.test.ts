@@ -1,5 +1,6 @@
 import { to } from "../distribution/lognormal.ts";
 import operate from "../operate.ts";
+import assertArray from "./assertArray.ts";
 
 Deno.test("operate", () => {
   const x = to(10, 20, { n: 10 });
@@ -11,5 +12,5 @@ Deno.test("operate", () => {
   const multiply = (a: number | number[], b: number | number[]) =>
     operate((a, b) => a * b, a, b);
 
-  console.log(add(multiply(x, y), z));
+  assertArray(add(multiply(x, y), z), 10, 0);
 });

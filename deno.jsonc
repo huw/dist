@@ -4,10 +4,10 @@
   "exports": "./mod.ts",
   "imports": {
     "@es-toolkit/es-toolkit": "jsr:@es-toolkit/es-toolkit@^1.21.0",
+    "@std/assert": "jsr:@std/assert@^1.0.6",
     "@toshiara/special-erfinv": "npm:@toshiara/special-erfinv@^1.0.0",
     "d3": "npm:d3@^7.9.0",
     "d3-random": "npm:d3-random@^3.0.1",
-    "subscript/compile": "npm:subscript@^8.2.2/compile.js",
-    "subscript/parse": "npm:subscript@^8.2.2/parse.js"
+    "subscript": "npm:subscript@^8.4.1"
   }
 }
