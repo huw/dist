@@ -1,15 +1,19 @@
-import { assertGreater } from "@std/assert";
+import { assertGreater, assertLess } from "@std/assert";
 import { dist, mixture } from "../mod.ts";
 import assertArray from "./assertArray.ts";
 import * as d3 from "d3";
-import { assertLess } from "@std/assert/less";
 
 Deno.test("mixture", () => {
-  const x = [0, 1, 2];
-  const y = Array.from({ length: 20 }, () => 10);
-  const z = [-1];
-
-  assertArray(mixture([x, y, z], undefined, { n: 10 }), 10, -1, 10);
+  assertArray(
+    mixture(
+      [[0, 1, 2], Array.from({ length: 20 }, () => 10), [-1]],
+      undefined,
+      { n: 10 },
+    ),
+    10,
+    -1,
+    10,
+  );
 });
 
 Deno.test("mixture with number-only inputs", () => {

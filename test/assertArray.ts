@@ -13,10 +13,8 @@ export default function assertArray(
     assertEquals(value.length, size);
     assert(
       value.every((x) =>
-        lower ? x >= lower : true &&
-            upper
-          ? x <= upper
-          : true
+        (lower ? x >= lower : true) &&
+        (upper ? x <= upper : true)
       ),
     );
   } else {
