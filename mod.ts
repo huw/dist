@@ -1,6 +1,5 @@
 export { default as dist } from "./dist.ts";
 export { default as mixture } from "./mixture.ts";
-export { default as operate } from "./operate.ts";
 export {
   default as truncate,
   truncateLeft,

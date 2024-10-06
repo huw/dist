@@ -4,7 +4,7 @@ export default function truncate(
   sample: number | number[],
   left?: number,
   right?: number,
-) {
+): number[] {
   if (typeof sample === "number") {
     sample = [sample];
   }
@@ -23,10 +23,16 @@ export default function truncate(
   );
 }
 
-export function truncateLeft(sample: number | number[], cutoff: number) {
+export function truncateLeft(
+  sample: number | number[],
+  cutoff: number,
+): number[] {
   return truncate(sample, cutoff);
 }
 
-export function truncateRight(sample: number | number[], cutoff: number) {
+export function truncateRight(
+  sample: number | number[],
+  cutoff: number,
+): number[] {
   return truncate(sample, undefined, cutoff);
 }

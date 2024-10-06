@@ -1,10 +1,32 @@
 import { sampleSize } from "@es-toolkit/es-toolkit";
 
+type operation = (a: number, b: number) => number;
+
 export default function operate(
-  operation: (a: number, b: number) => number,
+  operation: operation,
+  a: number,
+  b: number,
+): number;
+export default function operate(
+  operation: operation,
+  a: number[],
+  b: number,
+): number[];
+export default function operate(
+  operation: operation,
+  a: number,
+  b: number[],
+): number[];
+export default function operate(
+  operation: operation,
+  a: number[],
+  b: number[],
+): number[];
+export default function operate(
+  operation: operation,
   a: number | number[],
   b: number | number[],
-) {
+): number | number[] {
   if (typeof a === "number" && typeof b === "number") {
     return operation(a, b);
   }

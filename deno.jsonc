@@ -1,7 +1,8 @@
 {
   "name": "@huw/dist",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "exports": "./mod.ts",
+  "license": "Unlicense",
   "imports": {
     "@es-toolkit/es-toolkit": "jsr:@es-toolkit/es-toolkit@^1.21.0",
     "@std/assert": "jsr:@std/assert@^1.0.6",

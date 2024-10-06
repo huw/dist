@@ -5,7 +5,7 @@ export default function mixture(
   samples: (number | number[])[],
   weights?: number[],
   { n = DEFAULT_N } = {},
-) {
+): number[] {
   if (weights && samples.length !== weights.length) {
     throw new Error("Samples and weights must have the same length");
   }
