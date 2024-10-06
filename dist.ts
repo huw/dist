@@ -1,6 +1,18 @@
-import parse, { binary, err, group, unary } from "subscript/parse";
+import parse, {
+  binary,
+  err,
+  group,
+  lookup,
+  next,
+  unary,
+} from "subscript/parse";
 import compile, { operator } from "subscript/compile";
 import {
+  _0,
+  _9,
+  _E,
+  _e,
+  PERIOD,
   PREC_ADD,
   PREC_EXP,
   PREC_GROUP,
@@ -11,7 +23,30 @@ import operate from "./operate.ts";
 import { lognormalInterval } from "./distribution/lognormal.ts";
 
 // Support for numeric literals
-import "subscript/feature/number.js";
+// Adapted from `subscript/feature/number.js` (no substantive changes, it was broken without vendoring it)
+
+function parseNumber() {
+  const parsed = next((characterCode: number) => {
+    switch (true) {
+      case characterCode === PERIOD:
+      case characterCode >= _0 && characterCode <= _9:
+        return 1;
+      case characterCode === _E:
+      case characterCode === _e:
+        return 2;
+      default:
+        return 0;
+    }
+  });
+  const number = Number(parsed);
+  return ["", Number.isFinite(number) ? number : err()];
+}
+
+lookup[PERIOD] = parseNumber;
+
+for (let i = _0; i <= _9; i++) {
+  lookup[i] = parseNumber;
+}
 
 // Addition & subtraction
 // Adapted from `subscript/feature/add.js` (removed assignment)
